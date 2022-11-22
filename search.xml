@@ -4,19 +4,179 @@
   
     
     <entry>
-      <title>第一篇文章</title>
-      <link href="/post/5c2fafc7.html"/>
-      <url>/post/5c2fafc7.html</url>
+      <title>平凡-1</title>
+      <link href="/post/be55346b.html"/>
+      <url>/post/be55346b.html</url>
       
-        <content type="html"><![CDATA[<h3 id="你好，世界！"><a href="#你好，世界！" class="headerlink" title="你好，世界！"></a>你好，世界！</h3>]]></content>
+        <content type="html"><![CDATA[<h1 id="只是个测试啦"><a href="#只是个测试啦" class="headerlink" title="只是个测试啦"></a>只是个测试啦</h1>]]></content>
       
       
+      <categories>
+          
+          <category> 生活情感 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 小说 </tag>
+            
+            <tag> 故事 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>老虎与小白兔的故事-1</title>
+      <link href="/post/b02f68e3.html"/>
+      <url>/post/b02f68e3.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="只是个测试啦"><a href="#只是个测试啦" class="headerlink" title="只是个测试啦"></a>只是个测试啦</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 睡前故事 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 故事 </tag>
+            
+            <tag> 儿童 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>多线程</title>
+      <link href="/post/5729df21.html"/>
+      <url>/post/5729df21.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="只是个测试啦"><a href="#只是个测试啦" class="headerlink" title="只是个测试啦"></a>只是个测试啦</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 操作系统 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 多线程 </tag>
+            
+            <tag> Thread </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>简单动态规划</title>
+      <link href="/post/974e6562.html"/>
+      <url>/post/974e6562.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="只是个测试啦"><a href="#只是个测试啦" class="headerlink" title="只是个测试啦"></a>只是个测试啦</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构与算法 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 动态规划 </tag>
+            
+            <tag> LeetCode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>TCP协议详解</title>
+      <link href="/post/dc9cc96a.html"/>
+      <url>/post/dc9cc96a.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="只是个测试啦"><a href="#只是个测试啦" class="headerlink" title="只是个测试啦"></a>只是个测试啦</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> TCP </tag>
+            
+            <tag> 拥塞控制 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>docker安装mysql</title>
+      <link href="/post/25ae9841.html"/>
+      <url>/post/25ae9841.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Docker安装mysql"><a href="#Docker安装mysql" class="headerlink" title="Docker安装mysql"></a>Docker安装mysql</h1><h3 id="1、下载指定版本镜像"><a href="#1、下载指定版本镜像" class="headerlink" title="1、下载指定版本镜像"></a>1、下载指定版本镜像</h3><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:<span class="number">8.0</span>.<span class="number">26</span>  </span><br></pre></td></tr></table></figure><h3 id="2、查看镜像id"><a href="#2、查看镜像id" class="headerlink" title="2、查看镜像id"></a>2、查看镜像id</h3><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure><h3 id="3、运行容器"><a href="#3、运行容器" class="headerlink" title="3、运行容器"></a>3、运行容器</h3><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">run</span><span class="language-bash"> -d --name=MySQL8.0 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=1234 mysql</span></span><br></pre></td></tr></table></figure><p>参数说明</p><ul><li><p>-d：后台运行容器</p></li><li><p>—name：设置容器实例的名称，如果不指定，它将产生一个随机名称</p></li><li><p>-p：将Mysql容器端口绑定到主机上的相同端口，这样在主机上使用3306端口访问数据库也就能访问到Docker容器内的数据库</p></li><li><p>-e 设置环境变量。这里设置MySQL 的root密码。</p></li><li><p>mysql是用来创建容器的图像的名称，如需指定版本，则后面要跟版本号（mysql:8.0.26）</p></li></ul><p>可以列出正在运行的容器来检查上一步是否成功</p><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure><p>如果没有成功则可以手动启动容器</p><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">run</span><span class="language-bash"> MySQL8.0</span></span><br></pre></td></tr></table></figure><h3 id="4、将容器连接到伪终端"><a href="#4、将容器连接到伪终端" class="headerlink" title="4、将容器连接到伪终端"></a>4、将容器连接到伪终端</h3><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it MySQL8.<span class="number">0</span> /bin/bash</span><br></pre></td></tr></table></figure><p>这样可以使得你以控制台方式操作mysql，非常方便</p><h3 id="5、更改配置文件"><a href="#5、更改配置文件" class="headerlink" title="5、更改配置文件"></a>5、更改配置文件</h3><p>1.查看配置文件位置</p><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --verbose --help --pid-file=/var/<span class="keyword">run</span><span class="language-bash">/mysqld/mysqld.pid | grep -A 1 <span class="string">&quot;Default options&quot;</span></span></span><br></pre></td></tr></table></figure><p>2.修改配置文件</p><figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/mysql/my.cnf</span><br></pre></td></tr></table></figure><h4 id="注意，这里有很多坑"><a href="#注意，这里有很多坑" class="headerlink" title="注意，这里有很多坑"></a>注意，这里有很多坑</h4><ol><li><p>首先会提示vim：command not found，不论你使用rpm还是yum都无法安装，因为他俩也找不到</p></li><li><p>首先需要输入“apt-get upgrade”，这一步是同步&#x2F;etc&#x2F;apt&#x2F;sources.list和&#x2F;etc&#x2F;apt.sources.list.d中列出的索引，这样才能获取到最新的软件包</p></li><li><p>使用“apt-get install vim”安装vim即可</p></li></ol><p>这样以后，就可以修改配置文件了</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">character-set-server=utf8mb4</span><br><span class="line">[client]</span><br><span class="line">default-character-set=utf8mb4</span><br><span class="line">[mysql]</span><br><span class="line">default-character-set=utf8mb4</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 后端开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+            <tag> mysql </tag>
+            
+        </tags>
       
     </entry>
     
     
   
   
+    
+    
+    <entry>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
     
     
     <entry>
@@ -31,22 +191,11 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>留言板</title>
+      <link href="/comments/index.html"/>
+      <url>/comments/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>给我留言吧</title>
-      <link href="/guestbook/index.html"/>
-      <url>/guestbook/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="欢迎来到我的博客！"><a href="#欢迎来到我的博客！" class="headerlink" title="欢迎来到我的博客！"></a>欢迎来到我的博客！</h1><blockquote><p>欢迎在这里留言！任何问题都可以在这里留言，我会及时回复的，添加email可以获得更快的回复速度。</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h1 id="欢迎来到我的主页！"><a href="#欢迎来到我的主页！" class="headerlink" title="欢迎来到我的主页！"></a>欢迎来到我的主页！</h1><blockquote><p>欢迎在这里留言！任何问题都可以在这里留言，我会及时回复的，添加email可以获得更快的回复速度。</p></blockquote>]]></content>
       
     </entry>
     
@@ -64,11 +213,11 @@
     
     
     <entry>
-      <title>电影</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
+      <title></title>
+      <link href="/css/custom.css"/>
+      <url>/css/custom.css</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[/* 页脚与头图透明 */#footer {    background: transparent !important;  }  #page-header {    background: transparent !important;  }    /* 白天模式遮罩透明 */  #footer::before {    background: transparent !important;  }  #page-header::before {    background: transparent !important;  }    /* 夜间模式遮罩透明 */  [data-theme="dark"] #footer::before {    background: transparent !important;  }  [data-theme="dark"] #page-header::before {    background: transparent !important;  }  /* 侧边栏个人信息卡片动态渐变色 */#aside-content > .card-widget.card-info {    background: linear-gradient(      -45deg,      #e8d8b9,      #eccec5,      #a3e9eb,      #bdbdf0,      #eec1ea    );    box-shadow: 0 0 5px rgb(66, 68, 68);    position: relative;    background-size: 400% 400%;    -webkit-animation: Gradient 10s ease infinite;    -moz-animation: Gradient 10s ease infinite;    animation: Gradient 10s ease infinite !important;  }  @-webkit-keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }  @-moz-keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }  @keyframes Gradient {    0% {      background-position: 0% 50%;    }    50% {      background-position: 100% 50%;    }    100% {      background-position: 0% 50%;    }  }    /* 黑夜模式适配 */  [data-theme="dark"] #aside-content > .card-widget.card-info {    background: #191919ee;  }    /* 个人信息Follow me按钮 */  #aside-content > .card-widget.card-info > #card-info-btn {    background-color: #3eb8be;    border-radius: 8px;  }/* 文章页H1-H6图标样式效果 *//* 控制风车转动速度 4s那里可以自己调节快慢 */h1::before,h2::before,h3::before,h4::before,h5::before,h6::before {  -webkit-animation: ccc 4s linear infinite;  animation: ccc 4s linear infinite;}/* 控制风车转动方向 -1turn 为逆时针转动，1turn 为顺时针转动，相同数字部分记得统一修改 */@-webkit-keyframes ccc {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}@keyframes ccc {  0% {    -webkit-transform: rotate(0deg);    transform: rotate(0deg);  }  to {    -webkit-transform: rotate(-1turn);    transform: rotate(-1turn);  }}/* 设置风车颜色 */#content-inner.layout h1::before {  color: #ef50a8;  margin-left: -1.55rem;  font-size: 1.3rem;  margin-top: -0.23rem;}#content-inner.layout h2::before {  color: #fb7061;  margin-left: -1.35rem;  font-size: 1.1rem;  margin-top: -0.12rem;}#content-inner.layout h3::before {  color: #ffbf00;  margin-left: -1.22rem;  font-size: 0.95rem;  margin-top: -0.09rem;}#content-inner.layout h4::before {  color: #a9e000;  margin-left: -1.05rem;  font-size: 0.8rem;  margin-top: -0.09rem;}#content-inner.layout h5::before {  color: #57c850;  margin-left: -0.9rem;  font-size: 0.7rem;  margin-top: 0rem;}#content-inner.layout h6::before {  color: #5ec1e0;  margin-left: -0.9rem;  font-size: 0.66rem;  margin-top: 0rem;}/* s设置风车hover动效 6s那里可以自己调节快慢*/#content-inner.layout h1:hover,#content-inner.layout h2:hover,#content-inner.layout h3:hover,#content-inner.layout h4:hover,#content-inner.layout h5:hover,#content-inner.layout h6:hover {  color: var(--theme-color);}#content-inner.layout h1:hover::before,#content-inner.layout h2:hover::before,#content-inner.layout h3:hover::before,#content-inner.layout h4:hover::before,#content-inner.layout h5:hover::before,#content-inner.layout h6:hover::before {  color: var(--theme-color);  -webkit-animation: ccc 6s linear infinite;  animation: ccc 6s linear infinite;}]]></content>
       
     </entry>
     
@@ -78,6 +227,17 @@
       <title>音乐</title>
       <link href="/music/index.html"/>
       <url>/music/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
