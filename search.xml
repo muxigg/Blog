@@ -169,17 +169,6 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>分类</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -191,9 +180,9 @@
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -206,7 +195,7 @@
       <link href="/comments/index.html"/>
       <url>/comments/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="欢迎来到我的主页！"><a href="#欢迎来到我的主页！" class="headerlink" title="欢迎来到我的主页！"></a>欢迎来到我的主页！</h1><blockquote><p>欢迎在这里留言！任何问题都可以在这里留言，我会及时回复的，添加email可以获得更快的回复速度。</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h2 id="❤️少年与爱永不老去，即便披荆斩棘，丢失怒马鲜衣❤️"><a href="#❤️少年与爱永不老去，即便披荆斩棘，丢失怒马鲜衣❤️" class="headerlink" title="❤️少年与爱永不老去，即便披荆斩棘，丢失怒马鲜衣❤️"></a>❤️少年与爱永不老去，即便披荆斩棘，丢失怒马鲜衣❤️</h2><h3 id="📢-留言须知"><a href="#📢-留言须知" class="headerlink" title="📢 留言须知"></a>📢 留言须知</h3><p>✔️ 在这里可以留下您的问题~<br>✔️ 在这里可以留下您的心情~<br>✔️ 在这里可以留下您的感想~<br>✔️ 在这里可以写下您的意见~<br>❌ 在这里不可以发表攻击言论！<br>❌ 在这里不可以发表反动言论！</p>]]></content>
       
     </entry>
     
@@ -235,9 +224,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -249,6 +238,17 @@
       <title>音乐</title>
       <link href="/music/index.html"/>
       <url>/music/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
