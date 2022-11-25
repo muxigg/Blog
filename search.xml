@@ -89,7 +89,7 @@
       <link href="/post/974e6562.html"/>
       <url>/post/974e6562.html</url>
       
-        <content type="html"><![CDATA[<h1 id="只是个测试啦"><a href="#只是个测试啦" class="headerlink" title="只是个测试啦"></a>只是个测试啦</h1>]]></content>
+        <content type="html"><![CDATA[<h2 id="什么是动态规划"><a href="#什么是动态规划" class="headerlink" title="什么是动态规划"></a>什么是动态规划</h2><p>动态规划最核心的思想，就在于<strong>拆分子问题，记住之前已经的计算出的结果，减少重复计算</strong>。</p><h2 id="经典问题—爬楼梯"><a href="#经典问题—爬楼梯" class="headerlink" title="经典问题—爬楼梯"></a>经典问题—爬楼梯</h2><p>假设你正在爬楼梯。需要 <code>n</code> 阶你才能到达楼顶。</p><p>每次你可以爬 <code>1</code> 或 <code>2</code> 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p><p>首先梳理一下思路，让我们反过来想一下：</p><ul><li>如果想爬上第10阶楼梯，那么你需要先到第8阶或者第9阶</li><li>如果想爬上第9阶楼梯，那么你需要先到第8阶或者第7阶</li><li>如果想爬上第8阶楼梯，那么你需要先到第7阶或者第6阶</li><li>……</li></ul><p>那么很容易脑海里有这样的思路，假设到达第10阶的方法为<code>f(10)</code>，那么<code>f(10)=f(9)+f(8)</code>，所以很容易可以得出这样一个公式<code>f(n)=f(n-1)+f(n-2)，n&gt;2</code>。显然<code>f(1)=1,f(2)=2</code>。于是，代码有了思路：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">climbStairs</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;=<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> f(n-<span class="number">1</span>)+f(n-<span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>可是，这样会带来极大的计算开销，让我们通过图来查看。</p><p><img src="https://img-1309553126.cos.ap-beijing.myqcloud.com/blog_imgs/%E7%88%AC%E6%A5%BC%E6%A2%AF.png" alt="跳台阶"></p><p>从红色框可以看出，这些部分有着严重的重复计算，随之n的变大，这种计算将越来越多。因此，可以考虑通过循环而不是递归来解决这个问题。既然需要前两步的方法数，那么把他记录下来就好。于是可以考虑以下的代码。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">climbStairs</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;=<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span>[] dp=<span class="keyword">new</span> <span class="title class_">int</span>[n+<span class="number">1</span>];</span><br><span class="line">    dp[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">    dp[<span class="number">2</span>]=<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">3</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        dp[i]=dp[i-<span class="number">1</span>]+dp[i-<span class="number">2</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp[n];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这样，就可以避免许多多余的计算，将时间复杂度控制在<code>O(n)</code>，空间复杂度同样为<code>O(n)</code>。</p><p>除此之外，可以进一步优化，将空间复杂度进一步降低。通过对上面代码的观察，可以发现第<code>n</code>步的运算依靠第<code>n-1</code>和第<code>n-2</code>步的运算结果，于是对代码做出调整。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">climbStairs</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;=<span class="number">2</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> a=<span class="number">1</span>,b=<span class="number">2</span>;</span><br><span class="line">    <span class="type">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">3</span>;i&lt;=n;++i)&#123;</span><br><span class="line">        ans=a+b;</span><br><span class="line">        a=b;</span><br><span class="line">        b=ans;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这样，就把空间复杂度控制在了<code>O(1)</code>。</p>]]></content>
       
       
       <categories>
@@ -169,20 +169,20 @@
     
     
     <entry>
-      <title>时间轴</title>
-      <link href="/archives/index.html"/>
-      <url>/archives/index.html</url>
+      <title>关于我</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="👦基本信息"><a href="#👦基本信息" class="headerlink" title="👦基本信息"></a>👦基本信息</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">Name:</span> <span class="string">Pancras</span></span><br><span class="line"><span class="attr">Github:</span> <span class="string">https://github.com/muxigg</span></span><br><span class="line"><span class="attr">Blog:</span> <span class="string">https://www.pancras.love</span></span><br></pre></td></tr></table></figure><h1 id="🔧技术掌握"><a href="#🔧技术掌握" class="headerlink" title="🔧技术掌握"></a>🔧技术掌握</h1><p>✅ 熟悉Java后端<br>✅ 看得懂前端<br>✅ 略微会一些些JavaScript<br>✅ 了解一些深度学习相关知识<br>✅ 会一丢丢C、C++</p><h1 id="🌈关于本站"><a href="#🌈关于本站" class="headerlink" title="🌈关于本站"></a>🌈关于本站</h1><p>建立的初衷是为了记录一些技术博客，分享一些心得体会，同时会放一些自己写的文章~</p><h1 id="🙋免责申明"><a href="#🙋免责申明" class="headerlink" title="🙋免责申明"></a>🙋免责申明</h1><p>本站以分享技术经验、学习知识为目的，所有文章所涉及使用的工具、资源等均来自互联网， 仅供学习和研究使用，并非盈利。如果无意之中侵犯了您的版权，请来信告知。本站将在第一时间删除！</p>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>分类</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -202,9 +202,9 @@
     
     
     <entry>
-      <title>分类</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>时间轴</title>
+      <link href="/archives/index.html"/>
+      <url>/archives/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -235,9 +235,9 @@
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>电影</title>
+      <link href="/movies/index.html"/>
+      <url>/movies/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -246,9 +246,9 @@
     
     
     <entry>
-      <title>电影</title>
-      <link href="/movies/index.html"/>
-      <url>/movies/index.html</url>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
