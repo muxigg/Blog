@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-07T14:00:26.709Z</updated>
+  <updated>2023-03-21T10:33:32.034Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2023/03/04/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"/>
     <id>http://example.com/2023/03/04/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/</id>
     <published>2023-03-04T12:09:54.000Z</published>
-    <updated>2023-03-07T14:00:26.709Z</updated>
+    <updated>2023-03-21T10:33:32.034Z</updated>
     
     
     
@@ -32,11 +32,28 @@
   </entry>
   
   <entry>
+    <title>MySQL详解</title>
+    <link href="http://example.com/2023/02/20/MySQL%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://example.com/2023/02/20/MySQL%E8%AF%A6%E8%A7%A3/</id>
+    <published>2023-02-20T03:00:18.000Z</published>
+    <updated>2023-03-21T10:33:36.375Z</updated>
+    
+    
+    
+    
+    <category term="数据库" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="mysql" scheme="http://example.com/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
     <title>TCP协议详解</title>
     <link href="http://example.com/2023/02/20/tcp%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3/"/>
     <id>http://example.com/2023/02/20/tcp%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3/</id>
     <published>2023-02-20T03:00:18.000Z</published>
-    <updated>2023-02-20T10:02:28.635Z</updated>
+    <updated>2023-03-21T10:33:35.872Z</updated>
     
     
     
@@ -49,19 +66,28 @@
   </entry>
   
   <entry>
-    <title>线程详解</title>
-    <link href="http://example.com/2023/02/20/%E7%BA%BF%E7%A8%8B%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://example.com/2023/02/20/%E7%BA%BF%E7%A8%8B%E8%AF%A6%E8%A7%A3/</id>
+    <title>剑指Offer专题</title>
+    <link href="http://example.com/2023/02/20/%E5%89%91%E6%8C%87Offer/"/>
+    <id>http://example.com/2023/02/20/%E5%89%91%E6%8C%87Offer/</id>
     <published>2023-02-20T03:00:18.000Z</published>
-    <updated>2023-02-20T10:03:30.186Z</updated>
+    <updated>2023-03-21T10:52:57.512Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="剑指Offer专题"><a href="#剑指Offer专题" class="headerlink" title="剑指Offer专题"></a>剑指Offer专题</h1><h4 id="剑指Offer03-数组中重复的数字"><a href="#剑指Offer03-数组中重复的数字" class="headerlink" title="剑指Offer03.数组中重复的数字"></a><a href="https://leetcode.cn/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/description/">剑指Offer03.数组中重复的数字</a></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.利用数组或者Set进行判断</span></span><br><span class="line"><span class="comment">//时间复杂度O(n),空间复杂度O(n)</span></span><br><span class="line">   <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">findRepeatNumber</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">       <span class="type">int</span>[] map=<span class="keyword">new</span> <span class="title class_">int</span>[nums.length];</span><br><span class="line">       <span class="keyword">for</span>(<span class="type">int</span> num:nums)&#123;</span><br><span class="line">           <span class="keyword">if</span>(map[num]&gt;<span class="number">0</span>)&#123;</span><br><span class="line">               <span class="keyword">return</span> num;</span><br><span class="line">           &#125;</span><br><span class="line">           map[num]++;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;    </span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">findRepeatNumber</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">       Set&lt;Integer&gt; set=<span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">       <span class="keyword">for</span>(<span class="type">int</span> num:nums)&#123;</span><br><span class="line">           <span class="keyword">if</span>(set.contains(num))&#123;</span><br><span class="line">               <span class="keyword">return</span> num;</span><br><span class="line">           &#125;</span><br><span class="line">           set.add(num);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//2.由于给定的数值都是小于nums.length的，所以可以进一步减少空间复杂度，实现原地交换</span></span><br><span class="line"><span class="comment">//时间复杂度O(n)，空间复杂度O(1)</span></span><br><span class="line">   <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">findRepeatNumber</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">       <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;nums.length;)&#123;</span><br><span class="line">           <span class="comment">//如果当前元素已在其相同下标的位置，则处理下一个元素</span></span><br><span class="line">           <span class="keyword">if</span>(nums[i]==i)&#123;</span><br><span class="line">               i++;</span><br><span class="line">               <span class="keyword">continue</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="comment">//如果当前元素所在的下标位置已经有相同的数字，则说明该元素重复了</span></span><br><span class="line">           <span class="keyword">if</span>(nums[i]==nums[nums[i]])&#123;</span><br><span class="line">               <span class="keyword">return</span> nums[i];</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="comment">//否则就把当前元素放到指定下标位置，准备处理那个换过来的元素</span></span><br><span class="line">           <span class="type">int</span> t=nums[nums[i]];</span><br><span class="line">           nums[nums[i]]=nums[i];</span><br><span class="line">           nums[i]=t;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure><h4 id="剑指-Offer-04-二维数组中的查找"><a href="#剑指-Offer-04-二维数组中的查找" class="headerlink" title="剑指 Offer 04. 二维数组中的查找"></a><a href="https://leetcode.cn/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/">剑指 Offer 04. 二维数组中的查找</a></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1.利用二分查找，因为每一行都有序，所以对每一行都进行一次二分查找即可</span></span><br><span class="line"><span class="comment">//时间复杂度O(nlog(m))，空间复杂度O(1)</span></span><br><span class="line">   <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">findNumberIn2DArray</span><span class="params">(<span class="type">int</span>[][] matrix, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">       <span class="keyword">for</span>(<span class="type">int</span>[] row:matrix)&#123;</span><br><span class="line">           <span class="keyword">if</span>(binarySearch(row,target))&#123;</span><br><span class="line">               <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">binarySearch</span><span class="params">(<span class="type">int</span>[] row,<span class="type">int</span> target)</span>&#123;</span><br><span class="line">       <span class="type">int</span> left=<span class="number">0</span>,right=row.length-<span class="number">1</span>;</span><br><span class="line">       <span class="keyword">while</span>(left&lt;=right)&#123;</span><br><span class="line">           <span class="type">int</span> mid=left+(right-left)/<span class="number">2</span>;</span><br><span class="line">           <span class="keyword">if</span>(target==row[mid])&#123;</span><br><span class="line">               <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">else</span> <span class="keyword">if</span>(target&gt;row[mid])&#123;</span><br><span class="line">               left=mid+<span class="number">1</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">else</span>&#123;</span><br><span class="line">               right=mid-<span class="number">1</span>;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//2.利用方法1的二分查找可以发现，只利用了行有序，没有用上列有序。</span></span><br><span class="line"><span class="comment">//从矩阵的右上角开始遍历，可以发现左边元素都比自己小，右边元素都比自己大，可以对这一性质加以利用。</span></span><br><span class="line">   <span class="comment">//如果当前元素大于target，则可以排除当前列，因为该列下方元素都比它大</span></span><br><span class="line">   <span class="comment">//如果当前元素小于target，则可以排除当前行，因为该行左边元素都比它小</span></span><br><span class="line">   <span class="comment">//时间复杂度O(m+n)，空间复杂度O(1)</span></span><br><span class="line">   <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">findNumberIn2DArray</span><span class="params">(<span class="type">int</span>[][] matrix, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">       <span class="type">int</span> m=matrix.length;</span><br><span class="line">       <span class="keyword">if</span>(m==<span class="number">0</span>)&#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="type">int</span> n=matrix[<span class="number">0</span>].length;</span><br><span class="line"></span><br><span class="line">       <span class="type">int</span> i=<span class="number">0</span>,j=n-<span class="number">1</span>;</span><br><span class="line">       <span class="keyword">while</span>(i&lt;m&amp;&amp;j&gt;=<span class="number">0</span>)&#123;</span><br><span class="line">           <span class="keyword">if</span>(target==matrix[i][j])&#123;</span><br><span class="line">               <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">else</span> <span class="keyword">if</span>(target&lt;matrix[i][j])&#123;</span><br><span class="line">               j--;</span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">else</span>&#123;</span><br><span class="line">               i++;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure><h4 id="剑指-Offer-05-替换空格"><a href="#剑指-Offer-05-替换空格" class="headerlink" title="剑指 Offer 05. 替换空格"></a><a href="https://leetcode.cn/problems/ti-huan-kong-ge-lcof/description/">剑指 Offer 05. 替换空格</a></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//简单模拟即可    </span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">replaceSpace</span><span class="params">(String s)</span> &#123;</span><br><span class="line">       <span class="type">StringBuffer</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuffer</span>();</span><br><span class="line">       <span class="keyword">for</span>(<span class="type">char</span> c:s.toCharArray())&#123;</span><br><span class="line">           <span class="keyword">if</span>(c==<span class="string">&#x27; &#x27;</span>)&#123;</span><br><span class="line">               sb.append(<span class="string">&quot;%20&quot;</span>);</span><br><span class="line">           &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">               sb.append(c);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> sb.toString();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure><h4 id="剑指-Offer-06-从尾到头打印链表"><a href="#剑指-Offer-06-从尾到头打印链表" class="headerlink" title="剑指 Offer 06. 从尾到头打印链表"></a><a href="https://leetcode.cn/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/description/">剑指 Offer 06. 从尾到头打印链表</a></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//利用递归的性质，从数组最深处保存</span></span><br><span class="line"><span class="comment">//时间复杂度O(n),空间复杂度O(n)</span></span><br><span class="line">   <span class="type">int</span>[] ans;</span><br><span class="line">   <span class="type">int</span> len=<span class="number">0</span>;</span><br><span class="line">   <span class="keyword">public</span> <span class="type">int</span>[] reversePrint(ListNode head) &#123;</span><br><span class="line">       <span class="keyword">if</span>(head==<span class="literal">null</span>)&#123;</span><br><span class="line">           ans=<span class="keyword">new</span> <span class="title class_">int</span>[len];</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">else</span>&#123;</span><br><span class="line">           len++;</span><br><span class="line">           reversePrint(head.next);</span><br><span class="line">           ans[ans.length-len]=head.val;</span><br><span class="line">           len--;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> ans;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//为了节省递归导致的栈空间，可以使用最原始的方法，计算长度，然后直接存储</span></span><br><span class="line"><span class="comment">//时间复杂度O(n),空间复杂度O(1)</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span>[] reversePrint(ListNode head) &#123;</span><br><span class="line">       ListNode p=head;</span><br><span class="line">       <span class="type">int</span> len=<span class="number">0</span>;</span><br><span class="line">       <span class="keyword">while</span>(p!=<span class="literal">null</span>)&#123;</span><br><span class="line">           len++;</span><br><span class="line">           p=p.next;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       p=head;</span><br><span class="line">       <span class="type">int</span>[] ans=<span class="keyword">new</span> <span class="title class_">int</span>[len];</span><br><span class="line">       <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=len;++i)&#123;</span><br><span class="line">           ans[len-i]=p.val;</span><br><span class="line">           p=p.next;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> ans;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;剑指Offer专题&quot;&gt;&lt;a href=&quot;#剑指Offer专题&quot; class=&quot;headerlink&quot; title=&quot;剑指Offer专题&quot;&gt;&lt;/a&gt;剑指Offer专题&lt;/h1&gt;&lt;h4 id=&quot;剑指Offer03-数组中重复的数字&quot;&gt;&lt;a href=&quot;#剑指Offer</summary>
+      
     
     
     
+    <category term="数据结构与算法" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
-    <category term="操作系统" scheme="http://example.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
+    <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
     
-    <category term="thread" scheme="http://example.com/tags/thread/"/>
+    <category term="剑指Offer" scheme="http://example.com/tags/%E5%89%91%E6%8C%87Offer/"/>
     
   </entry>
   
@@ -70,7 +96,7 @@
     <link href="http://example.com/2023/02/20/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/"/>
     <id>http://example.com/2023/02/20/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3/</id>
     <published>2023-02-20T03:00:18.000Z</published>
-    <updated>2023-03-04T12:07:51.837Z</updated>
+    <updated>2023-03-21T10:50:49.276Z</updated>
     
     
     
@@ -83,19 +109,19 @@
   </entry>
   
   <entry>
-    <title>MySQL详解</title>
-    <link href="http://example.com/2023/02/20/MySQL%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://example.com/2023/02/20/MySQL%E8%AF%A6%E8%A7%A3/</id>
+    <title>线程详解</title>
+    <link href="http://example.com/2023/02/20/%E7%BA%BF%E7%A8%8B%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://example.com/2023/02/20/%E7%BA%BF%E7%A8%8B%E8%AF%A6%E8%A7%A3/</id>
     <published>2023-02-20T03:00:18.000Z</published>
-    <updated>2023-02-20T09:59:25.010Z</updated>
+    <updated>2023-03-21T10:33:34.824Z</updated>
     
     
     
     
-    <category term="数据库" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="操作系统" scheme="http://example.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-    <category term="mysql" scheme="http://example.com/tags/mysql/"/>
+    <category term="thread" scheme="http://example.com/tags/thread/"/>
     
   </entry>
   
